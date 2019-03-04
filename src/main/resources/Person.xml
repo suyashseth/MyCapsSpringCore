@@ -5,11 +5,12 @@
 
 	<bean id="person" class="com.capgemini.dev.xml.Person">
 		<property name="id" value="101"></property>
-		<property name="name" value="Dinga"></property>
-		<property name="job" ref="tester"></property>
+		<property name="name" value="Shashi"></property>
+		<property name="job" ref="dancer"></property>
 	</bean>
 
     <bean id="developer" class="com.capgemini.dev.xml.SoftwareDeveloper"></bean>
     <bean id="tester" class="com.capgemini.dev.xml.SoftwareTester"></bean>
+    <bean id="dancer" class="com.capgemini.dev.xml.DiscoDancer"></bean>
 
 </beans>

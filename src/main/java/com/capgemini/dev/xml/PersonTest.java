@@ -8,8 +8,10 @@ public class PersonTest {
 		
 		ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("Person.xml");
 		Person p = ctx.getBean(Person.class);
+		System.out.println(p.getName());
 		p.getJob().dowork();
 		ctx.close();
+		
 		
 		
 	}
