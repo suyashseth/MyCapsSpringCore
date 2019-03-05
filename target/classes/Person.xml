@@ -3,13 +3,14 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="person" class="com.capgemini.dev.xml.Person">
+	<bean id="person" class="com.capgemini.dev.xml.Person" init-method="customInit"
+	destroy-method="customDestroy">
 		<property name="id" value="101"></property>
 		<property name="name" value="Shashi"></property>
-		<property name="job" ref="dancer"></property>
+		<property name="job" ref="tester"></property>
 	</bean>
 
-    <bean id="developer" class="com.capgemini.dev.xml.SoftwareDeveloper"></bean>
+    <bean id="developer" class="com.capgemini.dev.xml.SoftwareDeveloper" init-method="initM"></bean>
     <bean id="tester" class="com.capgemini.dev.xml.SoftwareTester"></bean>
     <bean id="dancer" class="com.capgemini.dev.xml.DiscoDancer"></bean>
 
