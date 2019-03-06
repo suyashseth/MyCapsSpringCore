@@ -12,15 +12,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
+import com.capgemini.dev.autowireanno.Job;
+
 @Component
 public class Cat implements InitializingBean,DisposableBean,BeanClassLoaderAware{
 
 	private String name = "tom";
 	private String color = "Grey";
 	
-	@Autowired
+	@Autowired(required=false)
 	@Qualifier("tom")
 	private Animal ani;
+	
 	
 	@PostConstruct
 	public void customInit()

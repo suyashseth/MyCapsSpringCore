@@ -7,9 +7,15 @@ public class PersonTest {
 	public static void main(String[] args) {
 		
 		ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("Person.xml");
-		Person p = ctx.getBean(Person.class);
-		System.out.println(p.getName());
-		p.getJob().dowork();
+		
+		String [] beans = ctx.getBeanDefinitionNames();
+		
+		for(String bean:beans)
+		{
+			System.out.println(bean);
+		}
+		
+		
 		ctx.close();
 		
 		

@@ -1,4 +1,4 @@
-package com.capgemini.dev.autowireannotaions;
+package com.capgemini.dev.autowireanno;
 
 public interface Job {
 

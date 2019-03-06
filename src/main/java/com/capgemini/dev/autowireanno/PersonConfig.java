@@ -1,10 +1,10 @@
-package com.capgemini.dev.autowireannotaions;
+package com.capgemini.dev.autowireanno;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan(basePackages="com.capgemini.dev.autowireannotaions")
+@ComponentScan(basePackages= "com.capgemini.dev.autowireanno")
 public class PersonConfig {
 
 }

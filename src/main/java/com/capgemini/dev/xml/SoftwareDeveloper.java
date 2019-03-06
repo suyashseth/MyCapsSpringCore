@@ -4,13 +4,17 @@ import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 
-public class SoftwareDeveloper implements Job, BeanNameAware,BeanPostProcessor{
+public class SoftwareDeveloper implements Job, BeanNameAware/*BeanPostProcessor*/{
 
-	public void initM()
+	/*public void customInit()
 	{
-		System.out.println("Initialization of Developer");
+		System.out.println("Initialization of SoftwareDeveloper");
 	}
-	
+	public void customDestroy()
+	{
+		System.out.println("Destruction of SoftwareDeveloper");
+	}
+	*/
 	@Override
 	public void dowork() {
 		System.out.println("Code Code Code.......");
@@ -23,7 +27,7 @@ public class SoftwareDeveloper implements Job, BeanNameAware,BeanPostProcessor{
 		
 	}
 
-	@Override
+	/*@Override
 	public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
 		System.out.println("Before Init");
 		return null;
@@ -34,6 +38,6 @@ public class SoftwareDeveloper implements Job, BeanNameAware,BeanPostProcessor{
 		System.out.println("After Init");
 		return null;
 	}
-
+*/
 	
 }

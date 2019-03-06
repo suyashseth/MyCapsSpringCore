@@ -1,9 +1,13 @@
-package com.capgemini.dev.autowireannotaions;
+package com.capgemini.dev.autowireanno;
 
 import javax.inject.Inject;
 import javax.inject.Named;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+
+import com.capgemini.dev.autowire.Animal;
+import com.capgemini.dev.autowire.Cat;
 
 @Named("person")
 public class Person {
@@ -12,8 +16,10 @@ public class Person {
 	private String pname = "Varmaji";
 	
 	@Inject
-	@Qualifier("singer")
+	@Qualifier("dancer")
 	private Job job;
+	
+
 
 	public int getPid() {
 		return pid;
